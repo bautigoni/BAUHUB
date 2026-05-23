@@ -1,0 +1,118 @@
+export const APPS = [
+  {
+    id: 'techasset',
+    name: 'Techasset',
+    url: 'https://techasset.bauhub.online',
+    en: {
+      tag: 'Operations',
+      desc: 'Smart school operations and asset management — track classroom status, inventory, tasks, loans, fleet resources and daily logistics in one place.',
+    },
+    es: {
+      tag: 'Operaciones',
+      desc: 'Gestión inteligente de operaciones escolares. Seguimiento de aulas, inventario, tareas, préstamos, recursos y logística diaria en un solo lugar.',
+    },
+  },
+  {
+    id: 'horaria',
+    name: 'Horaria',
+    url: 'https://horaria.bauhub.online',
+    en: {
+      tag: 'Scheduling',
+      desc: 'Intelligent school scheduling without endless spreadsheets. Organize teachers, classes, classrooms and campuses — clear, automatic, conflict-free.',
+    },
+    es: {
+      tag: 'Horarios',
+      desc: 'Horarios escolares inteligentes sin planillas eternas. Organizá docentes, cursos, aulas y sedes de forma clara, automática y sin conflictos.',
+    },
+  },
+  {
+    id: 'checkinout',
+    name: 'Checkinout',
+    url: 'https://checkinout.bauhub.online',
+    en: {
+      tag: 'Access',
+      desc: 'A visitor check-in and check-out system that simplifies school entry and exit flows in a secure, efficient way.',
+    },
+    es: {
+      tag: 'Accesos',
+      desc: 'Sistema de ingreso y egreso para visitantes, diseñado para simplificar y asegurar los flujos de entrada y salida.',
+    },
+  },
+  {
+    id: 'nexo',
+    name: 'NexoEscolar',
+    url: 'https://nexoescolar.bauhub.online',
+    en: {
+      tag: 'Permissions',
+      desc: 'A school authorization platform that simplifies family permissions and saves schools hours of administrative work.',
+    },
+    es: {
+      tag: 'Autorizaciones',
+      desc: 'Plataforma de autorizaciones escolares que simplifica procesos con familias y ahorra tiempo administrativo.',
+    },
+  },
+  {
+    id: 'fugas',
+    name: 'Fuga$',
+    url: 'https://fugas.bauhub.online',
+    en: {
+      tag: 'Finance',
+      desc: 'A personal finance app that helps users make smarter decisions through analytics, clarity and better money tracking.',
+    },
+    es: {
+      tag: 'Finanzas',
+      desc: 'App de finanzas personales con analíticas y apoyo para tomar mejores decisiones.',
+    },
+  },
+];
+
+export const COPY = {
+  en: {
+    nav: ['Home', 'Apps', 'Contact'],
+    wordmark: 'BAUHUB',
+    manifesto: 'A hub of useful apps.',
+    subhead: 'A personal product ecosystem — five focused tools for education, operations and everyday clarity.',
+    bySignature: 'by Bautista Goñi',
+    exploreApps: 'Explore apps',
+    contactMe: 'Contact',
+    openApp: 'Open app',
+    appsLabel: 'THE APPS',
+    appsHeading: 'Five apps. One ecosystem.',
+    appsSub: 'Built with care, designed to feel inevitable.',
+    contactHeader: "Let's build something",
+    contactSub: 'Custom apps, consulting and collaboration. I read every message.',
+    emailBtn: 'Email me',
+    whatsappBtn: 'WhatsApp',
+    formName: 'Your name',
+    formEmail: 'Your email',
+    formMessage: 'What are you working on?',
+    formSend: 'Send message',
+    footerTagline: '© 2026 BauHub — designed & built by Bautista Goñi',
+    footerLinks: 'Apps',
+    langToggle: 'ES',
+  },
+  es: {
+    nav: ['Inicio', 'Apps', 'Contacto'],
+    wordmark: 'BAUHUB',
+    heroLabel: 'ESTUDIO DE PRODUCTOS DIGITALES',
+    manifesto: 'Apps que resuelven problemas reales.',
+    subhead: 'Un ecosistema de herramientas creadas para educación, gestión y operaciones.',
+    bySignature: 'Por Bautista Goñi',
+    exploreApps: 'Explorar apps',
+    contactMe: 'Contacto',
+    openApp: 'Abrir app',
+    appsLabel: 'LAS APPS',
+    appsSub: 'Herramientas digitales para resolver necesidades reales de la gestión educativa.',
+    contactHeader: 'Hablemos',
+    contactSub: 'Desarrollo de apps, colaboración y soluciones digitales para educación.',
+    emailBtn: 'Escribirme',
+    whatsappBtn: 'WhatsApp',
+    formName: 'Tu nombre',
+    formEmail: 'Tu email',
+    formMessage: '¿En qué estás trabajando?',
+    formSend: 'Enviar mensaje',
+    footerTagline: '© 2026 BauHub — diseñado y construido por Bautista Goñi',
+    footerLinks: 'Apps',
+    langToggle: 'EN',
+  },
+};

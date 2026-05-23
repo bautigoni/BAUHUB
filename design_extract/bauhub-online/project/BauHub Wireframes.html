@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>BauHub — Landing page wireframes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam:wght@400;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --hand: 'Kalam', 'Architects Daughter', cursive;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --display: 'Space Grotesk', system-ui, sans-serif;
+    --serif: 'Instrument Serif', Georgia, serif;
+  }
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  body { font-family: var(--hand); }
+  ::selection { background: rgba(0,200,255,0.3); }
+
+  /* Hide design-canvas grid bg under the dark artboards by giving them an opaque background — already applied per artboard */
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="wireframes.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "lang": "en",
+  "showNotes": true
+}/*EDITMODE-END*/;
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const lang = t.lang === "es" ? "es" : "en";
+
+  return (
+    <>
+      <DesignCanvas>
+        <DCSection
+          id="intro"
+          title="BauHub — landing page wireframes"
+          subtitle="4 directions, sketchy low-fi. Tweak language with the panel · click a card's expand icon to focus."
+        >
+          <DCArtboard id="d1" label="01 · Monolith — cyan · monumental wordmark · centered orb · scroll chapters" width={1280} height={3380}>
+            <DirMonolith lang={lang} />
+          </DCArtboard>
+
+          <DCArtboard id="d2" label="02 · Constellation — violet · bau·hub mark · orbiting nodes · row cards" width={1280} height={2780}>
+            <DirConstellation lang={lang} />
+          </DCArtboard>
+
+          <DCArtboard id="d3" label="03 · Bento Stack — electric blue · BauHub sans · floating cube · bento grid" width={1280} height={2880}>
+            <DirBento lang={lang} />
+          </DCArtboard>
+
+          <DCArtboard id="d4" label="04 · Editorial — amber · italic serif · index column · numbered chapters" width={1280} height={3680}>
+            <DirEditorial lang={lang} />
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="notes" title="Reading guide" subtitle="What each direction is testing">
+          <DCArtboard id="n1" label="Notes" width={1280} height={760}>
+            <NotesBoard lang={lang} />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Language" />
+        <TweakRadio
+          label="Copy language"
+          value={lang}
+          options={[{ value: "en", label: "EN" }, { value: "es", label: "ES" }]}
+          onChange={(v) => setTweak("lang", v)}
+        />
+        <TweakSection label="Reading" />
+        <div style={{padding: "6px 12px 10px", fontSize: 11, lineHeight: 1.45, color: "#5a4a2a"}}>
+          <div style={{marginBottom: 6}}><b>4 wireframe directions.</b></div>
+          Each artboard is the <i>full landing page</i> stacked vertically. Open any artboard with the <b>⤢</b> icon to view it edge-to-edge. Drag the grip to reorder.
+          <div style={{marginTop: 8, opacity: 0.7}}>Once you pick a direction, I'll build the polished version with real scroll-driven motion.</div>
+        </div>
+      </TweaksPanel>
+    </>
+  );
+}
+
+function NotesBoard({ lang }) {
+  const rows = [
+    {
+      n: "01", name: "MONOLITH",
+      color: "#4be3ff",
+      vibe: "Apple Pro-page energy. Reverent, monumental, centered.",
+      hero: "Huge cyan orb dead-center, all-caps BAUHUB, manifesto headline.",
+      apps: "Full-bleed chapters with giant 01-05 outline numerals; alternating sides.",
+      best: "When you want the apps to feel important and individually special.",
+    },
+    {
+      n: "02", name: "CONSTELLATION",
+      color: "#a78bff",
+      vibe: "Ecosystem-first. The 5 apps visibly orbit one center.",
+      hero: "A working diagram: hub + 5 satellite nodes with pulsing connection lines.",
+      apps: "Each app gets a horizontal row card with its node mark on the left.",
+      best: "When the story is 'one platform, many tools' — interconnectedness matters most.",
+    },
+    {
+      n: "03", name: "BENTO STACK",
+      color: "#3b82f6",
+      vibe: "Modern SaaS / Vercel-adjacent. Dense, scannable, product-forward.",
+      hero: "Headline left, floating glass cube right.",
+      apps: "Asymmetric bento — one big featured card, varied sizes, screenshot in each tile.",
+      best: "When showing actual product UI matters more than mood.",
+    },
+    {
+      n: "04", name: "EDITORIAL",
+      color: "#f5b14f",
+      vibe: "Personal, considered, magazine-like. Less SaaS, more craft.",
+      hero: "Italic serif headline, index column on the right, single floating diamond.",
+      apps: "Numbered chapters with abstract symbols (one per app), italic serif descriptions.",
+      best: "When 'apps I build' should feel like a maker's portfolio, not a product suite.",
+    },
+  ];
+  return (
+    <div style={{padding: "40px 50px", fontFamily: "var(--hand)", background: "#fffaf0", height: "100%"}}>
+      <div style={{fontFamily: "var(--display)", fontSize: 32, fontWeight: 800, marginBottom: 6}}>How to read these</div>
+      <div style={{fontSize: 14, color: "#5a4a2a", marginBottom: 24, maxWidth: 760}}>
+        All four pages are dark-themed and follow the same brief (hero · apps · contact · footer · hidden-until-scroll nav). They differ in <b>structural metaphor</b>, <b>wordmark style</b>, <b>accent color</b>, and <b>how each app is presented</b>. Pick a winner — or mix elements — and I'll polish it next.
+      </div>
+      <table style={{width: "100%", borderCollapse: "collapse", fontSize: 13}}>
+        <thead>
+          <tr style={{textAlign: "left", color: "#7a6a4a", fontFamily: "var(--mono)", fontSize: 10, letterSpacing: 1.5}}>
+            <th style={{padding: "8px 6px", width: 40}}></th>
+            <th style={{padding: "8px 6px", width: 140}}>NAME</th>
+            <th style={{padding: "8px 6px"}}>VIBE</th>
+            <th style={{padding: "8px 6px"}}>HERO</th>
+            <th style={{padding: "8px 6px"}}>APPS</th>
+            <th style={{padding: "8px 6px"}}>BEST WHEN…</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(r => (
+            <tr key={r.n} style={{borderTop: "1px dashed rgba(0,0,0,0.15)", verticalAlign: "top"}}>
+              <td style={{padding: "14px 6px", fontFamily: "var(--mono)", color: r.color, fontWeight: 700}}>{r.n}</td>
+              <td style={{padding: "14px 6px"}}>
+                <div style={{fontFamily: "var(--display)", fontSize: 18, fontWeight: 800, color: "#29261b"}}>{r.name}</div>
+                <div style={{display: "inline-block", marginTop: 6, padding: "2px 8px", background: r.color, color: "#0a0a0a", fontFamily: "var(--mono)", fontSize: 10, borderRadius: 10}}>accent</div>
+              </td>
+              <td style={{padding: "14px 6px", color: "#3a2f1f"}}>{r.vibe}</td>
+              <td style={{padding: "14px 6px", color: "#3a2f1f"}}>{r.hero}</td>
+              <td style={{padding: "14px 6px", color: "#3a2f1f"}}>{r.apps}</td>
+              <td style={{padding: "14px 6px", color: "#3a2f1f", fontStyle: "italic"}}>{r.best}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

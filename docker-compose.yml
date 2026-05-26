@@ -1,0 +1,8 @@
+services:
+  bauhub:
+    build: .
+    image: bauhub:latest
+    container_name: bauhub
+    restart: unless-stopped
+    ports:
+      - "3000:3000"

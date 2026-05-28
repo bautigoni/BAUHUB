@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { COPY } from './data.js';
 import Nav from './components/Nav.jsx';
-import Hero from './components/Hero.jsx';
-import AppsSection from './components/AppsSection.jsx';
+import EcosystemHero from './components/EcosystemHero.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Particles from './components/Particles.jsx';
@@ -20,8 +19,7 @@ export default function App() {
       <Particles />
       <Nav copy={copy} lang={lang} onLangToggle={() => setLang(l => l === 'en' ? 'es' : 'en')} />
       <main>
-        <Hero copy={copy} />
-        <AppsSection copy={copy} lang={lang} />
+        <EcosystemHero copy={copy} lang={lang} />
         <Contact copy={copy} />
       </main>
       <Footer copy={copy} />

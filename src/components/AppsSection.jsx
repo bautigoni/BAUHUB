@@ -98,7 +98,7 @@ export default function AppsSection({ copy, lang }) {
         <div style={{
           flex: 1,
           height: 1,
-          background: 'linear-gradient(to right, rgba(75,227,255,0.35), transparent)',
+          background: 'linear-gradient(to right, rgba(61,183,255,0.35), transparent)',
         }} />
       </div>
 

@@ -70,7 +70,7 @@ export default function AppChapter({ app, idx, lang, copy }) {
           left: '8%',
           right: '8%',
           height: 1,
-          background: 'linear-gradient(to right, transparent, rgba(75,227,255,0.18), transparent)',
+          background: 'linear-gradient(to right, transparent, rgba(61,183,255,0.18), transparent)',
         }} />
       )}
 
@@ -97,11 +97,11 @@ export default function AppChapter({ app, idx, lang, copy }) {
             letterSpacing: '-0.06em',
             color: 'transparent',
             WebkitTextStroke: active
-              ? '1.5px rgba(75,227,255,0.6)'
-              : '1px rgba(75,227,255,0.25)',
+              ? '1.5px rgba(61,183,255,0.6)'
+              : '1px rgba(61,183,255,0.25)',
             textShadow: active
-              ? '0 0 80px rgba(75,227,255,0.4), 0 0 140px rgba(75,227,255,0.18)'
-              : '0 0 30px rgba(75,227,255,0.1)',
+              ? '0 0 80px rgba(61,183,255,0.4), 0 0 140px rgba(61,183,255,0.18)'
+              : '0 0 30px rgba(61,183,255,0.1)',
             transition: 'all 0.7s ease',
             userSelect: 'none',
           }}
@@ -149,10 +149,10 @@ export default function AppChapter({ app, idx, lang, copy }) {
           fontSize: 'clamp(40px, 5.5vw, 72px)',
           lineHeight: 0.98,
           letterSpacing: '-0.035em',
-          color: active ? '#d8f7ff' : '#ffffff',
+          color: active ? '#CFE7F7' : '#ffffff',
           textShadow: active
-            ? '0 0 40px rgba(75,227,255,0.45), 0 0 80px rgba(75,227,255,0.18)'
-            : '0 0 30px rgba(75,227,255,0.06)',
+            ? '0 0 40px rgba(61,183,255,0.45), 0 0 80px rgba(61,183,255,0.18)'
+            : '0 0 30px rgba(61,183,255,0.06)',
           transition: 'color 0.7s ease, text-shadow 0.7s ease',
         }}>
           {app.name}
@@ -182,23 +182,23 @@ export default function AppChapter({ app, idx, lang, copy }) {
               fontSize: 13.5,
               fontWeight: 600,
               color: 'var(--accent)',
-              border: '1px solid rgba(75,227,255,0.35)',
-              background: 'rgba(75,227,255,0.04)',
+              border: '1px solid rgba(61,183,255,0.35)',
+              background: 'rgba(61,183,255,0.04)',
               backdropFilter: 'blur(8px)',
               WebkitBackdropFilter: 'blur(8px)',
               textDecoration: 'none',
               transition: 'all 0.25s ease',
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.background = 'rgba(75,227,255,0.14)';
-              e.currentTarget.style.borderColor = 'rgba(75,227,255,0.75)';
+              e.currentTarget.style.background = 'rgba(61,183,255,0.14)';
+              e.currentTarget.style.borderColor = 'rgba(61,183,255,0.75)';
               e.currentTarget.style.gap = '14px';
               e.currentTarget.style.transform = 'translateX(2px)';
-              e.currentTarget.style.boxShadow = '0 0 30px rgba(75,227,255,0.3)';
+              e.currentTarget.style.boxShadow = '0 0 30px rgba(61,183,255,0.3)';
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.background = 'rgba(75,227,255,0.04)';
-              e.currentTarget.style.borderColor = 'rgba(75,227,255,0.35)';
+              e.currentTarget.style.background = 'rgba(61,183,255,0.04)';
+              e.currentTarget.style.borderColor = 'rgba(61,183,255,0.35)';
               e.currentTarget.style.gap = '10px';
               e.currentTarget.style.transform = 'none';
               e.currentTarget.style.boxShadow = 'none';

@@ -44,7 +44,7 @@ export default function Particles() {
             width: d.size,
             height: d.size,
             borderRadius: '50%',
-            background: 'rgba(75,227,255,0.7)',
+            background: 'rgba(61,183,255,0.7)',
             animation: `twinkle ${d.duration}s ${d.delay}s ease-in-out infinite`,
           }}
         />

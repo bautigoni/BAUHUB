@@ -271,8 +271,8 @@ export default function Hero({ copy }) {
             gap: 10,
             padding: '6px 14px',
             borderRadius: 999,
-            background: 'rgba(75,227,255,0.06)',
-            border: '1px solid rgba(75,227,255,0.22)',
+            background: 'rgba(61,183,255,0.06)',
+            border: '1px solid rgba(61,183,255,0.22)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
             fontFamily: 'var(--mono)',
@@ -284,7 +284,7 @@ export default function Hero({ copy }) {
           <span style={{
             width: 6, height: 6, borderRadius: '50%',
             background: 'var(--accent)',
-            boxShadow: '0 0 10px rgba(75,227,255,0.9)',
+            boxShadow: '0 0 10px rgba(61,183,255,0.9)',
             animation: 'orb-glow-pulse 2.4s ease-in-out infinite',
           }} />
           {copy.heroLabel ?? 'ESTUDIO DE PRODUCTOS DIGITALES'}
@@ -360,7 +360,7 @@ export default function Hero({ copy }) {
               lineHeight: 0.86,
               letterSpacing: '-0.06em',
               color: 'transparent',
-              WebkitTextStroke: '1px rgba(75,227,255,0.35)',
+              WebkitTextStroke: '1px rgba(61,183,255,0.35)',
               filter: 'blur(0.6px)',
               pointerEvents: 'none',
               willChange: 'transform',
@@ -380,12 +380,12 @@ export default function Hero({ copy }) {
               lineHeight: 0.86,
               letterSpacing: '-0.06em',
               margin: 0,
-              background: 'linear-gradient(180deg, #ffffff 0%, #d8f7ff 45%, #4be3ff 100%)',
+              background: 'linear-gradient(180deg, #ffffff 0%, #CFE7F7 45%, #3DB7FF 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               color: 'transparent',
               WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 6px 80px rgba(75,227,255,0.45))',
+              filter: 'drop-shadow(0 6px 80px rgba(61,183,255,0.45))',
               willChange: 'transform',
             }}
           >
@@ -420,9 +420,9 @@ export default function Hero({ copy }) {
             marginTop: 14,
             width: 'min(420px, 60vw)',
             height: 1,
-            background: 'linear-gradient(to right, transparent, rgba(75,227,255,0.85), transparent)',
+            background: 'linear-gradient(to right, transparent, rgba(61,183,255,0.85), transparent)',
             opacity: 0,
-            boxShadow: '0 0 14px rgba(75,227,255,0.5)',
+            boxShadow: '0 0 14px rgba(61,183,255,0.5)',
           }}
         />
       </div>
@@ -481,9 +481,9 @@ export default function Hero({ copy }) {
           textTransform: 'uppercase',
         }}
       >
-        <span style={{ width: 28, height: 1, background: 'linear-gradient(to right, transparent, rgba(75,227,255,0.6))' }} />
+        <span style={{ width: 28, height: 1, background: 'linear-gradient(to right, transparent, rgba(61,183,255,0.6))' }} />
         {copy.bySignature}
-        <span style={{ width: 28, height: 1, background: 'linear-gradient(to left, transparent, rgba(75,227,255,0.6))' }} />
+        <span style={{ width: 28, height: 1, background: 'linear-gradient(to left, transparent, rgba(61,183,255,0.6))' }} />
       </div>
 
       <div
@@ -522,7 +522,7 @@ export default function Hero({ copy }) {
         <div style={{
           width: 1,
           height: 44,
-          background: 'linear-gradient(to bottom, transparent, rgba(75,227,255,0.7))',
+          background: 'linear-gradient(to bottom, transparent, rgba(61,183,255,0.7))',
           animation: 'scroll-line 2.4s ease-in-out infinite',
         }} />
         <span style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: 3, color: 'var(--ink3)' }}>
@@ -536,7 +536,7 @@ export default function Hero({ copy }) {
 function Bracket({ pos }) {
   const size = 18;
   const w = 1;
-  const c = 'rgba(75,227,255,0.55)';
+  const c = 'rgba(61,183,255,0.55)';
   const common = {
     position: 'absolute',
     width: size,
@@ -571,30 +571,30 @@ function HeroBtn({ href, children, primary = false, initialHidden = false }) {
         letterSpacing: '0.02em',
         textDecoration: 'none',
         background: isPrimary
-          ? 'linear-gradient(135deg, #4be3ff 0%, #7af1ff 100%)'
+          ? 'linear-gradient(135deg, #3DB7FF 0%, #67D6FF 100%)'
           : 'rgba(255,255,255,0.03)',
-        color: isPrimary ? '#06222c' : 'var(--ink)',
+        color: isPrimary ? '#02101E' : 'var(--ink)',
         border: isPrimary ? '1px solid rgba(255,255,255,0.45)' : '1px solid rgba(255,255,255,0.16)',
         backdropFilter: isPrimary ? 'none' : 'blur(10px)',
         WebkitBackdropFilter: isPrimary ? 'none' : 'blur(10px)',
         boxShadow: isPrimary
-          ? '0 8px 32px rgba(75,227,255,0.45), inset 0 1px 0 rgba(255,255,255,0.45)'
+          ? '0 8px 32px rgba(61,183,255,0.45), inset 0 1px 0 rgba(255,255,255,0.45)'
           : '0 4px 18px rgba(0,0,0,0.3)',
         transition: 'transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease',
       }}
       onMouseEnter={e => {
         e.currentTarget.style.transform = 'translateY(-3px) scale(1.025)';
         if (isPrimary) {
-          e.currentTarget.style.boxShadow = '0 14px 50px rgba(75,227,255,0.7), inset 0 1px 0 rgba(255,255,255,0.55)';
+          e.currentTarget.style.boxShadow = '0 14px 50px rgba(61,183,255,0.7), inset 0 1px 0 rgba(255,255,255,0.55)';
         } else {
-          e.currentTarget.style.borderColor = 'rgba(75,227,255,0.55)';
-          e.currentTarget.style.background = 'rgba(75,227,255,0.08)';
+          e.currentTarget.style.borderColor = 'rgba(61,183,255,0.55)';
+          e.currentTarget.style.background = 'rgba(61,183,255,0.08)';
         }
       }}
       onMouseLeave={e => {
         e.currentTarget.style.transform = 'none';
         if (isPrimary) {
-          e.currentTarget.style.boxShadow = '0 8px 32px rgba(75,227,255,0.45), inset 0 1px 0 rgba(255,255,255,0.45)';
+          e.currentTarget.style.boxShadow = '0 8px 32px rgba(61,183,255,0.45), inset 0 1px 0 rgba(255,255,255,0.45)';
         } else {
           e.currentTarget.style.borderColor = 'rgba(255,255,255,0.16)';
           e.currentTarget.style.background = 'rgba(255,255,255,0.03)';

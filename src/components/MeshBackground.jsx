@@ -42,8 +42,8 @@ export default function MeshBackground() {
         position: 'absolute',
         inset: 0,
         backgroundImage: [
-          'linear-gradient(rgba(75,227,255,0.045) 1px, transparent 1px)',
-          'linear-gradient(90deg, rgba(75,227,255,0.045) 1px, transparent 1px)',
+          'linear-gradient(rgba(61,183,255,0.045) 1px, transparent 1px)',
+          'linear-gradient(90deg, rgba(61,183,255,0.045) 1px, transparent 1px)',
         ].join(', '),
         backgroundSize: '64px 64px, 64px 64px',
         maskImage: 'radial-gradient(ellipse 80% 60% at 50% 30%, #000 35%, transparent 85%)',
@@ -55,8 +55,8 @@ export default function MeshBackground() {
         position: 'absolute',
         inset: 0,
         backgroundImage: [
-          'linear-gradient(rgba(75,227,255,0.02) 1px, transparent 1px)',
-          'linear-gradient(90deg, rgba(75,227,255,0.02) 1px, transparent 1px)',
+          'linear-gradient(rgba(61,183,255,0.02) 1px, transparent 1px)',
+          'linear-gradient(90deg, rgba(61,183,255,0.02) 1px, transparent 1px)',
         ].join(', '),
         backgroundSize: '16px 16px, 16px 16px',
         maskImage: 'radial-gradient(ellipse 60% 40% at 50% 50%, #000 20%, transparent 70%)',
@@ -73,13 +73,13 @@ export default function MeshBackground() {
       >
         <defs>
           <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#4be3ff" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#4be3ff" stopOpacity="0" />
+            <stop offset="0%" stopColor="#3DB7FF" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#3DB7FF" stopOpacity="0" />
           </radialGradient>
           <linearGradient id="line-grad" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stopColor="#4be3ff" stopOpacity="0" />
-            <stop offset="50%" stopColor="#4be3ff" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#4be3ff" stopOpacity="0" />
+            <stop offset="0%" stopColor="#3DB7FF" stopOpacity="0" />
+            <stop offset="50%" stopColor="#3DB7FF" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#3DB7FF" stopOpacity="0" />
           </linearGradient>
         </defs>
         {NETWORK_LINES.map((l, i) => (
@@ -93,7 +93,7 @@ export default function MeshBackground() {
         {NETWORK_NODES.map((n, i) => (
           <g key={i}>
             <circle cx={n[0]} cy={n[1]} r="14" fill="url(#node-glow)" />
-            <circle cx={n[0]} cy={n[1]} r="1.6" fill="#4be3ff" />
+            <circle cx={n[0]} cy={n[1]} r="1.6" fill="#3DB7FF" />
           </g>
         ))}
       </svg>
@@ -103,9 +103,9 @@ export default function MeshBackground() {
         position: 'absolute',
         inset: 0,
         background: [
-          'radial-gradient(ellipse 70% 50% at 50% -10%, rgba(75,227,255,0.10), transparent 60%)',
-          'radial-gradient(ellipse 50% 40% at 90% 60%, rgba(75,227,255,0.05), transparent 65%)',
-          'radial-gradient(ellipse 50% 40% at 10% 80%, rgba(75,227,255,0.04), transparent 65%)',
+          'radial-gradient(ellipse 70% 50% at 50% -10%, rgba(61,183,255,0.10), transparent 60%)',
+          'radial-gradient(ellipse 50% 40% at 90% 60%, rgba(61,183,255,0.05), transparent 65%)',
+          'radial-gradient(ellipse 50% 40% at 10% 80%, rgba(61,183,255,0.04), transparent 65%)',
         ].join(', '),
       }} />
     </div>

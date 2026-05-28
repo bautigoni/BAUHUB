@@ -54,7 +54,7 @@ export default function Orb({ size = 300 }) {
         position: 'absolute',
         inset: -80,
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(75,227,255,0.28) 0%, transparent 60%)',
+        background: 'radial-gradient(circle, rgba(61,183,255,0.28) 0%, transparent 60%)',
         filter: 'blur(32px)',
         animation: 'orb-glow-pulse 3.6s ease-in-out infinite',
         pointerEvents: 'none',
@@ -78,18 +78,18 @@ export default function Orb({ size = 300 }) {
           borderRadius: '50%',
           background: [
             'radial-gradient(circle at 32% 28%,',
-            '  #b4f7ff 0%,',
-            '  #4be3ff 10%,',
-            '  rgba(75,227,255,0.55) 28%,',
+            '  #67D6FF 0%,',
+            '  #3DB7FF 10%,',
+            '  rgba(61,183,255,0.55) 28%,',
             '  rgba(0,160,200,0.18) 52%,',
             '  #0b0b0d 76%)',
           ].join(' '),
           boxShadow: [
             'inset -20px -28px 60px rgba(0,0,0,0.7)',
-            'inset 6px 8px 28px rgba(75,227,255,0.15)',
-            '0 0 60px rgba(75,227,255,0.5)',
-            '0 0 120px rgba(75,227,255,0.2)',
-            '0 0 200px rgba(75,227,255,0.08)',
+            'inset 6px 8px 28px rgba(61,183,255,0.15)',
+            '0 0 60px rgba(61,183,255,0.5)',
+            '0 0 120px rgba(61,183,255,0.2)',
+            '0 0 200px rgba(61,183,255,0.08)',
           ].join(', '),
         }} />
 
@@ -112,7 +112,7 @@ export default function Orb({ size = 300 }) {
         position: 'absolute',
         inset: -14,
         borderRadius: '50%',
-        border: '1px dashed rgba(75,227,255,0.4)',
+        border: '1px dashed rgba(61,183,255,0.4)',
         animation: 'ring-spin-a 14s linear infinite',
         pointerEvents: 'none',
       }} />
@@ -137,14 +137,14 @@ export default function Orb({ size = 300 }) {
         <circle
           cx={half} cy={half} r={half - 2}
           fill="none"
-          stroke="rgba(75,227,255,0.15)"
+          stroke="rgba(61,183,255,0.15)"
           strokeWidth="1"
           strokeDasharray="3 9"
         />
         <circle
           cx={half} cy={half} r={half * 0.6}
           fill="none"
-          stroke="rgba(75,227,255,0.35)"
+          stroke="rgba(61,183,255,0.35)"
           strokeWidth="0.8"
         />
       </svg>

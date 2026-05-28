@@ -65,7 +65,7 @@ export default function Contact({ copy }) {
         marginBottom: 28,
         justifyContent: 'center',
       }}>
-        <div style={{ flex: 1, height: 1, background: 'linear-gradient(to right, transparent, rgba(75,227,255,0.3))' }} />
+        <div style={{ flex: 1, height: 1, background: 'linear-gradient(to right, transparent, rgba(61,183,255,0.3))' }} />
         <div style={{
           fontFamily: 'var(--mono)',
           fontSize: 11,
@@ -75,7 +75,7 @@ export default function Contact({ copy }) {
         }}>
           CONTACT
         </div>
-        <div style={{ flex: 1, height: 1, background: 'linear-gradient(to left, transparent, rgba(75,227,255,0.3))' }} />
+        <div style={{ flex: 1, height: 1, background: 'linear-gradient(to left, transparent, rgba(61,183,255,0.3))' }} />
       </div>
 
       <h2 className="contact-anim" style={{
@@ -186,10 +186,10 @@ export default function Contact({ copy }) {
             borderRadius: 999,
             fontSize: 14.5,
             fontWeight: 600,
-            background: 'linear-gradient(135deg, #4be3ff 0%, #7af1ff 100%)',
-            color: '#06222c',
+            background: 'linear-gradient(135deg, #3DB7FF 0%, #67D6FF 100%)',
+            color: '#02101E',
             border: '1px solid rgba(255,255,255,0.4)',
-            boxShadow: '0 8px 32px rgba(75,227,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)',
+            boxShadow: '0 8px 32px rgba(61,183,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)',
             transition: 'transform 0.25s ease, box-shadow 0.25s ease',
             display: 'inline-flex',
             alignItems: 'center',
@@ -197,11 +197,11 @@ export default function Contact({ copy }) {
           }}
           onMouseEnter={e => {
             e.currentTarget.style.transform = 'translateY(-2px) scale(1.025)';
-            e.currentTarget.style.boxShadow = '0 14px 50px rgba(75,227,255,0.7), inset 0 1px 0 rgba(255,255,255,0.5)';
+            e.currentTarget.style.boxShadow = '0 14px 50px rgba(61,183,255,0.7), inset 0 1px 0 rgba(255,255,255,0.5)';
           }}
           onMouseLeave={e => {
             e.currentTarget.style.transform = 'none';
-            e.currentTarget.style.boxShadow = '0 8px 32px rgba(75,227,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)';
+            e.currentTarget.style.boxShadow = '0 8px 32px rgba(61,183,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)';
           }}
         >
           {sent ? '✓ ' : ''}{copy.formSend}
@@ -246,9 +246,9 @@ function Field({ label, value, onChange, type, required }) {
           transition: 'border-color 0.2s, background 0.2s, box-shadow 0.2s',
         }}
         onFocus={e => {
-          e.currentTarget.style.borderColor = 'rgba(75,227,255,0.55)';
-          e.currentTarget.style.background = 'rgba(75,227,255,0.04)';
-          e.currentTarget.style.boxShadow = '0 0 0 4px rgba(75,227,255,0.08)';
+          e.currentTarget.style.borderColor = 'rgba(61,183,255,0.55)';
+          e.currentTarget.style.background = 'rgba(61,183,255,0.04)';
+          e.currentTarget.style.boxShadow = '0 0 0 4px rgba(61,183,255,0.08)';
         }}
         onBlur={e => {
           e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
@@ -275,30 +275,30 @@ function ContactBtn({ href, children, primary = false, icon }) {
         fontSize: 14.5,
         fontWeight: 600,
         background: primary
-          ? 'linear-gradient(135deg, #4be3ff 0%, #7af1ff 100%)'
+          ? 'linear-gradient(135deg, #3DB7FF 0%, #67D6FF 100%)'
           : 'rgba(255,255,255,0.03)',
-        color: primary ? '#06222c' : 'var(--ink)',
+        color: primary ? '#02101E' : 'var(--ink)',
         border: primary ? '1px solid rgba(255,255,255,0.4)' : '1px solid rgba(255,255,255,0.14)',
         backdropFilter: primary ? 'none' : 'blur(10px)',
         WebkitBackdropFilter: primary ? 'none' : 'blur(10px)',
         boxShadow: primary
-          ? '0 8px 32px rgba(75,227,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)'
+          ? '0 8px 32px rgba(61,183,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)'
           : '0 4px 18px rgba(0,0,0,0.3)',
         transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s, background 0.25s',
       }}
       onMouseEnter={e => {
         e.currentTarget.style.transform = 'translateY(-3px) scale(1.04)';
         if (primary) {
-          e.currentTarget.style.boxShadow = '0 14px 50px rgba(75,227,255,0.7), inset 0 1px 0 rgba(255,255,255,0.5)';
+          e.currentTarget.style.boxShadow = '0 14px 50px rgba(61,183,255,0.7), inset 0 1px 0 rgba(255,255,255,0.5)';
         } else {
-          e.currentTarget.style.borderColor = 'rgba(75,227,255,0.5)';
-          e.currentTarget.style.background = 'rgba(75,227,255,0.08)';
+          e.currentTarget.style.borderColor = 'rgba(61,183,255,0.5)';
+          e.currentTarget.style.background = 'rgba(61,183,255,0.08)';
         }
       }}
       onMouseLeave={e => {
         e.currentTarget.style.transform = 'none';
         if (primary) {
-          e.currentTarget.style.boxShadow = '0 8px 32px rgba(75,227,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)';
+          e.currentTarget.style.boxShadow = '0 8px 32px rgba(61,183,255,0.42), inset 0 1px 0 rgba(255,255,255,0.4)';
         } else {
           e.currentTarget.style.borderColor = 'rgba(255,255,255,0.14)';
           e.currentTarget.style.background = 'rgba(255,255,255,0.03)';

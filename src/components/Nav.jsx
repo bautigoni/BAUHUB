@@ -32,7 +32,7 @@ export default function Nav({ copy, lang, onLangToggle }) {
         background: 'rgba(11,11,13,0.75)',
         backdropFilter: 'blur(18px)',
         WebkitBackdropFilter: 'blur(18px)',
-        border: '1px solid rgba(75,227,255,0.15)',
+        border: '1px solid rgba(61,183,255,0.15)',
         boxShadow: '0 4px 32px rgba(0,0,0,0.4)',
         transition: 'opacity 0.35s ease, transform 0.35s ease',
         opacity: visible ? 1 : 0,
@@ -49,7 +49,7 @@ export default function Nav({ copy, lang, onLangToggle }) {
         fontSize: 16,
         letterSpacing: '-0.02em',
         marginRight: 8,
-        background: 'linear-gradient(180deg, #ffffff 0%, #4be3ff 100%)',
+        background: 'linear-gradient(180deg, #ffffff 0%, #3DB7FF 100%)',
         WebkitBackgroundClip: 'text',
         backgroundClip: 'text',
         color: 'transparent',
@@ -57,8 +57,8 @@ export default function Nav({ copy, lang, onLangToggle }) {
       }}>
         <span aria-hidden="true" style={{
           width: 10, height: 10, borderRadius: '50%',
-          background: 'radial-gradient(circle at 30% 30%, #dffaff, #4be3ff 50%, #0a8cad)',
-          boxShadow: '0 0 10px rgba(75,227,255,0.9)',
+          background: 'radial-gradient(circle at 30% 30%, #CFE7F7, #3DB7FF 50%, #1E88D9)',
+          boxShadow: '0 0 10px rgba(61,183,255,0.9)',
           WebkitTextFillColor: 'initial',
         }} />
         BauHub
@@ -78,7 +78,7 @@ export default function Nav({ copy, lang, onLangToggle }) {
           }}
           onMouseEnter={e => {
             e.currentTarget.style.color = 'var(--accent)';
-            e.currentTarget.style.background = 'rgba(75,227,255,0.08)';
+            e.currentTarget.style.background = 'rgba(61,183,255,0.08)';
           }}
           onMouseLeave={e => {
             e.currentTarget.style.color = 'var(--ink2)';
@@ -100,16 +100,16 @@ export default function Nav({ copy, lang, onLangToggle }) {
           fontFamily: 'var(--mono)',
           letterSpacing: 1,
           color: 'var(--accent)',
-          border: '1px solid rgba(75,227,255,0.3)',
+          border: '1px solid rgba(61,183,255,0.3)',
           transition: 'background 0.2s, border-color 0.2s',
         }}
         onMouseEnter={e => {
-          e.currentTarget.style.background = 'rgba(75,227,255,0.12)';
-          e.currentTarget.style.borderColor = 'rgba(75,227,255,0.7)';
+          e.currentTarget.style.background = 'rgba(61,183,255,0.12)';
+          e.currentTarget.style.borderColor = 'rgba(61,183,255,0.7)';
         }}
         onMouseLeave={e => {
           e.currentTarget.style.background = 'transparent';
-          e.currentTarget.style.borderColor = 'rgba(75,227,255,0.3)';
+          e.currentTarget.style.borderColor = 'rgba(61,183,255,0.3)';
         }}
       >
         {copy.langToggle}

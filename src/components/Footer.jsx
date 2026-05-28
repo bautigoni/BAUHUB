@@ -12,7 +12,7 @@ export default function Footer({ copy }) {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
         gap: 'clamp(32px, 4vw, 64px)',
-        background: 'linear-gradient(to bottom, transparent, rgba(75,227,255,0.02))',
+        background: 'linear-gradient(to bottom, transparent, rgba(61,183,255,0.02))',
       }}
     >
       {/* brand */}
@@ -22,7 +22,7 @@ export default function Footer({ copy }) {
           fontWeight: 800,
           fontSize: 32,
           letterSpacing: '-0.03em',
-          background: 'linear-gradient(180deg, #ffffff 0%, #4be3ff 100%)',
+          background: 'linear-gradient(180deg, #ffffff 0%, #3DB7FF 100%)',
           WebkitBackgroundClip: 'text',
           backgroundClip: 'text',
           color: 'transparent',
